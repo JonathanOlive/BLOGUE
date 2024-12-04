@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #333; color: white; padding: 1em; text-align: center; }
+        article { padding: 1em; border-bottom: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Blog</h1>
+    </header>
+    <main id="posts">
+        <!-- Os posts serão carregados aqui via JavaScript -->
+    </main>
+    <script>
+        const posts = [
+            { title: "Primeiro Post", content: "Bem-vindo ao meu blog!" },
+            { title: "Aprendendo JavaScript", content: "Hoje vamos aprender sobre funções." }
+        ];
+        const main = document.getElementById("posts");
+        posts.forEach(post => {
+            const article = document.createElement("article");
+            article.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
+            main.appendChild(article);
+        });
+    </script>
+</body>
+</html>
